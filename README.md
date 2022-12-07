@@ -16,22 +16,27 @@ xs = [-5, -4 -3, -2, -1, 0, 1, 2, 3, 4, 5]
 ys = [x**2 for x in xs]
 
 # One line:
-ac_write_to_file(
+
+ac.ac_write_to_file(
         [ac.AC_PLINE_COMMAND],
         [xs, ys],
         output_file ="my_script_1" 
     )
+
 # Multiple lines:
 
 y3 = [x**3 for x in xs]
 yx = [x for x in xs]
 
-ac_write_to_file(
+ac.ac_write_to_file(
 	[ac.AC_SPLINE_COMMAND, ac.AC_SPLINE_COMMAND, ac.AC_SPLINE_COMMAND],
         [xs, ys], 
 	[xs, y3], 
 	[xs, yx],
         output_file="my_script_2"
     )
-)
+
 ```
+
+## Note
+Disable "Object Snaps" in AutoCAD before run generated script.
